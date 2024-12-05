@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {      "name": "Run C++ with libcurl",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}/main.exe", // File đầu ra sau khi build
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "MIMode": "gdb",
+          "miDebuggerPath": "C:/MinGW/bin/gdb.exe", // Đường dẫn tới GDB (MinGW)
+          "preLaunchTask": "Build C++ with libcurl" // Khớp với label trong tasks.json
+      }
+  ]
+}
