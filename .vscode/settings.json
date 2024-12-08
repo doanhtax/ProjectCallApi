@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "curl.h": "c"
-    }
+    },
+    "cmake.sourceDirectory": "D:/Project_Call_API_Google/libcurl"
 }

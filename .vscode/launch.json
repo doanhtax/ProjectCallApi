@@ -1,18 +1,51 @@
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+        
+//         {
+//             "name": "Run C++ with libcurl",
+//             "type": "cppdbg",
+//             "request": "launch",
+//             "program": "${workspaceFolder}/main.exe", // File đầu ra sau khi build
+//             "args": [],
+//             "stopAtEntry": false,
+//             "cwd": "${workspaceFolder}",
+//             "environment": [],
+//             "externalConsole": true,
+//             "MIMode": "gdb",
+//             "miDebuggerPath": "C:/MinGW64/bin/gdb.exe", // Đường dẫn tới GDB (MinGW)
+//             "preLaunchTask": "C/C++: gcc.exe build active file" // Khớp với label trong tasks.json
+//         }
+//     ]
+// }
 {
-  "version": "0.2.0",
-  "configurations": [
-      {      "name": "Run C++ with libcurl",
-          "type": "cppdbg",
-          "request": "launch",
-          "program": "${workspaceFolder}/main.exe", // File đầu ra sau khi build
-          "args": [],
-          "stopAtEntry": false,
-          "cwd": "${workspaceFolder}",
-          "environment": [],
-          "externalConsole": true,
-          "MIMode": "gdb",
-          "miDebuggerPath": "C:/MinGW/bin/gdb.exe", // Đường dẫn tới GDB (MinGW)
-          "preLaunchTask": "Build C++ with libcurl" // Khớp với label trong tasks.json
-      }
-  ]
+    "version": "0.2.0",
+    
+    "configurations": [
+        
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/main",   // Đường dẫn đến file thực thi của bạn
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "C:/MinGW64/bin/gdb.exe",  // Đảm bảo đúng đường dẫn tới gdb.exe
+            "preLaunchTask": "C/C++: gcc.exe build active file",  // Tên task đã cấu hình trong tasks.json
+            "miDebuggerArgs": "",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+    
 }
